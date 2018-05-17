@@ -1,0 +1,22 @@
+<table >
+  <thead>
+    <th>ID</th>  
+    <th>Name</th>  
+    <th>Email</th>  
+    <th>Action</th>  
+  </thead>
+  <tbody>
+    <tr *ngFor='let da of data; let i = index'>
+      <td>{{da.id}}</td>
+      <td>{{da.name}}</td>
+      <td>{{da.email}}</td>
+      <td>
+        <button>Edit</button>
+        <button (click)=deleteRecord(i)>Delete</button>
+      </td>
+    </tr>
+    <tr *ngIf='data.length === 0'>
+      <td>No data</td>
+    </tr>
+  </tbody>  
+</table>
